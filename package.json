@@ -1,0 +1,38 @@
+{
+  "name": "puppeteer-must-know",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahengchang/puppeteer-must-know.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahengchang/puppeteer-must-know/issues"
+  },
+  "homepage": "https://github.com/wahengchang/puppeteer-must-know#readme",
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "puppeteer": "^1.6.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "codepage": "^1.14.0",
+    "html-entities": "^1.2.1",
+    "iconv-lite": "^0.4.24",
+    "jimp": "^0.6.0",
+    "js-meter": "^1.1.4",
+    "jsonschema": "^1.2.4",
+    "mysql2": "^1.6.5",
+    "node-fetch": "^2.3.0",
+    "optimist": "^0.6.1",
+    "query-string": "^6.4.0",
+    "sequelize": "^5.1.1"
+  }
+}
