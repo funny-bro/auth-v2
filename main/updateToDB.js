@@ -13,7 +13,8 @@
     cookieValue: `${cookieValue}`,
     enuid: `${enuid}`,
     ensid: `${ensid}`,
-    status: `${status}`
+    status: `${status}`,
+    statusNat: `${status}`
   }
 
   const condition = { username }

@@ -27,6 +27,11 @@ const Auth = {
      required: true,
      minLength: 1
     },
+    statusNat: { 
+     type: 'string',
+     required: true,
+     minLength: 1
+    },
     cfid: { 
      type: 'string',
      minLength: 1

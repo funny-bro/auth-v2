@@ -17,6 +17,7 @@ const Auth = sequelize.define('auth', {
   cfid: {type: Sequelize.STRING, allowNull: true },
   cftoken: {type: Sequelize.STRING, allowNull: true },
   status: {type: Sequelize.STRING, allowNull: true },  
+  statusNat: {type: Sequelize.STRING, allowNull: true },  
   createdAt: Sequelize.DATE,
   updatedAt: Sequelize.DATE,
 });
