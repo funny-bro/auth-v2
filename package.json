@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main/index"
+    "start": "node scraper/base.js"
   },
   "repository": {
     "type": "git",

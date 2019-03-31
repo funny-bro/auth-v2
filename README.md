@@ -11,7 +11,7 @@
 
  ## Run
  ```
-$ npm start
+$ node main/index.js
  ```
 
 ## Connect to EC2

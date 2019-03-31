@@ -40,7 +40,8 @@
       const cookies = require('./extractCookie')()
       const enuid = require('./extractEnuid')()
       const status = 'available'
-      const body = {...cookies, ...enuid, status}
+      const statusNat = 'available'
+      const body = {...cookies, ...enuid, status, statusNat}
       console.log(body)
       await authDao.update(body, {username})
       console.log('[INFO] update DB success')
