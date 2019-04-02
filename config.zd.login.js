@@ -15,6 +15,7 @@ module.exports = {
   url: `https://${process.env.NAT_ENTRY}/SSO/SSOcombineXml.aspx?url=GAIAS`,
   isDownloadResource: true,
   isDownloadCookies: true,
+  downloadResourceType: ['document'],
   beforeGotoPage: async function(page){
     try {
       await page.setViewport({ width: 1920, height: 1080 })

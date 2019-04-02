@@ -73,8 +73,14 @@ class Interceptor {
           fileName,
           size: buffer.length,
         }
-  
-        require('fs').writeFileSync(__dirname + `/../../${dir}${fileName}`, buffer)
+        
+        try {
+          require('fs').writeFileSync(__dirname + `/../../${dir}${fileName}`, buffer)
+        }
+        catch(err){
+          console.log('[ERROR] save saveReponse')
+          // console.error(err)
+        }
   
         if(cb) {
           cb(this.reqIdList, this.reqObj)

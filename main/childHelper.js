@@ -1,16 +1,15 @@
 exports.execPromise = function(cmd){
     return new Promise((resolve, reject)=>{
-        // this would be way easier on a shell/bash script :P
         const child_process = require('child_process');
 
         console.log(`[INFO] Child process: ${cmd}`)
+        const [first, ...others] = cmd.split(' ')
 
-        const p = child_process.exec(cmd,function (error, stdout, stderr) {
-            console.log('error: ' + error);
-            console.log('stderr: ' + stderr);
-            console.log('stdout: ' + stdout);
+        const p = child_process.spawn(first, [...others], {stdio: 'inherit'});
+        p.on('close', function(code) {
+            process.stdout.write('"npm install" finished with code ' + code + '\n');
             return resolve()
-        })
+        });
     })
   };
   

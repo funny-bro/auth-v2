@@ -11,7 +11,7 @@ module.exports = {
   name,
   url: `https://${process.env.NAT_ENTRY}/Default.aspx?view=24`,
   isDownloadResource: true,
-  // downloadResourceType: [],
+  downloadResourceType: ['document'],
   isDownloadCookies: true,
   beforeGotoPage: async function(page){
     await page.setCookie(...cookies);
