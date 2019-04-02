@@ -34,6 +34,7 @@
     catch(err){
       console.log('[ERROR] file existed, going to remove')
       await childHelper.execPromise(`rm -R ./${dir}`)
+      fs.mkdirSync(`./${dir}`)
     }
 
     const browser = await puppeteer.launch();
