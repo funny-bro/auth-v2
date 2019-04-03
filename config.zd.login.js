@@ -39,11 +39,12 @@ module.exports = {
         await dialog.dismiss();
   
         if(!msg.includes('登入成功!!')) {
-          throw 'Login fail'
+          // throw 'Login fail'
+          process.exit(1)
         }
       });
-      page.evaluate(() => alert('1'));
-      await sleep(2)
+      // page.evaluate(() => alert('1'));
+      await sleep(5)
     }
     catch(err){
       console.log('[ERROR] beforeGotoPage :', err)

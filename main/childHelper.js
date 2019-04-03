@@ -7,7 +7,11 @@ exports.execPromise = function(cmd){
 
         const p = child_process.spawn(first, [...others], {stdio: 'inherit'});
         p.on('close', function(code) {
-            process.stdout.write('"npm install" finished with code ' + code + '\n');
+            process.stdout.write(`\n[INFO] Child helpers, on close, code: ${code}\n`);
+
+            if(code ===1) {
+                return reject()
+            }
             return resolve()
         });
     })

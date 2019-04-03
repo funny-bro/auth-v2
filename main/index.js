@@ -48,7 +48,9 @@
     }
     catch(err){
       console.log('[ERROR] main/index for loop:', err)
-      throw ''
+      // throw ''
+      i-=1
+      continue
     }
   }
   
