@@ -22,6 +22,7 @@
     "puppeteer": "^1.6.1"
   },
   "dependencies": {
+    "@pscraper/cmd": "^0.0.5",
     "cheerio": "^1.0.0-rc.2",
     "codepage": "^1.14.0",
     "html-entities": "^1.2.1",
@@ -30,6 +31,7 @@
     "js-meter": "^1.1.4",
     "jsonschema": "^1.2.4",
     "mysql2": "^1.6.5",
+    "node-cron": "^2.0.3",
     "node-fetch": "^2.3.0",
     "optimist": "^0.6.1",
     "query-string": "^6.4.0",
