@@ -2,6 +2,8 @@
   const keys = require('../keys.json')
   const authDao = require('../db/auth/dao')
   const shell = require('./childHelper')
+  const extractCookie = require('./extractCookie')
+  const extractEnuid = require('./extractEnuid')
 
   const withinNHour = (targetDate, n = 10) => {
     const ONE_HOUR = 60 * 60 * 1000; /* ms */
@@ -37,8 +39,8 @@
 
       await shell.execPromise(`yarn start --config=./config.zd.scrape.js --cookies=./zd-login/cookies.json`)
 
-      const cookies = require('./extractCookie')()
-      const enuid = require('./extractEnuid')()
+      const cookies = extractCookie()
+      const enuid = extractEnuid()
       const status = 'available'
       const statusNat = 'available'
       const body = {...cookies, ...enuid, status, statusNat}

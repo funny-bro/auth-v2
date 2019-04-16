@@ -13,7 +13,7 @@ const sleep = (s) => new Promise((resolve)=> setTimeout(resolve, s*1000))
 module.exports = {
   name,
   url: `https://${process.env.NAT_ENTRY}/SSO/SSOcombineXml.aspx?url=GAIAS`,
-  isDownloadResource: true,
+  isDownloadResource: false,
   isDownloadCookies: true,
   downloadResourceType: ['document'],
   beforeGotoPage: async function(page){
