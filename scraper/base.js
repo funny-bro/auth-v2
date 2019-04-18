@@ -53,7 +53,10 @@
       isDownloadResource, downloadResourceType
     })
 
-    await page.goto(url, {waitUntil: 'networkidle0'});
+    await page.goto(url, {waitUntil: 'networkidle0'}).then(
+      ()=>{ console.log(`[INFO] go to page success`)},
+      ()=>{ console.log(`[INFO] go to page fail`)}
+    );
 
     if(afterPageLoad)
       await afterPageLoad(page);
@@ -62,7 +65,6 @@
     if(afterHtmlLoad)
       await afterHtmlLoad(html, page);
     
-
     const updatedHtml = await page.content()
     fs.writeFileSync(`./${dir}/index.html`, updatedHtml)
     console.log('[INFO] created index.html')
