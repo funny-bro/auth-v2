@@ -17,9 +17,16 @@ module.exports = {
     await page.setCookie(...cookies);
   },
   afterPageLoad: async function(page){
-    await sleep(2)
-    await page.goto(`https://${process.env.NAT_ENTRY}/SSO/SSOcombineXml.aspx?url=QT`)
-    await sleep(2)
+    try {
+      await sleep(2)
+      await page.goto(`https://${process.env.NAT_ENTRY}/SSO/SSOcombineXml.aspx?url=QT`)
+      await sleep(2)
+    }
+    catch(err){
+      console.log('[Error] exception adfterpageload')
+      await page.screenshot({path: `./${name}/screenshot-error-adfterpageload.png`});
+      process.exit(1)
+    }
   },
   afterHtmlLoad: async function(html, page){
   }
